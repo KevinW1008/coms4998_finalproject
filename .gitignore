@@ -1,6 +1,6 @@
 __pycache__
 VOCdevkit
-checkpoints
+#checkpoints
 .vscode
 *.pyc
 .idea/
@@ -8,4 +8,4 @@ __pycache__
 results
 checkpoints_bak
 cityscapes
-test_results
+#test_results
