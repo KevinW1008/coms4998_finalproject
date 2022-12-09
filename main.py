@@ -321,6 +321,7 @@ def main():
 
     interval_loss = 0
     while True:  # cur_itrs < opts.total_itrs:
+        torch.cuda.empty_cache()
         # =====  Train  =====
         model.train()
         cur_epochs += 1
