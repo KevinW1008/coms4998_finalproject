@@ -1,6 +1,6 @@
-# DeepLab - Pytorch - Kevin
+# DeepLab - Pytorch - Kevin Wang
 
-GitHub Repo is Forked from https://github.com/VainF/DeepLabV3Plus-Pytorch
+Repo is based on https://github.com/VainF/DeepLabV3Plus-Pytorch
 
 ### 1. Install Requirements
 
@@ -10,8 +10,17 @@ pip install -r requirements.txt
 
 ### 2. Train the model on Cityscapes
 
+#### 2.1 Start Visdom Server (Visualize Training)
+
 ```bash
-py main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 16 --output_stride 16 --data_root ./datasets/data/cityscapes 
+# First start visdom server on port 28333
+visdom -port 28333
+````
+
+#### 2.2 Run Training Command on Cityscapes Dataset
+
+```bash
+py main.py --model deeplabv3plus_mobilenet --dataset cityscapes --enable_vis --vis_port 28333 --gpu_id 0  --lr 0.1  --crop_size 768 --batch_size 2 --output_stride 16 --data_root ./datasets/data/cityscapes 
 ```
 
 ### 3. Make your Prediction (examples are in cityscape dataset folders)
